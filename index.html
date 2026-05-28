@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Full Stack QA Automation Roadmap 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#f8fafc;
+  color:#1e293b;
+  line-height:1.8;
+}
+
+/* HERO */
+
+.hero{
+  background:
+  linear-gradient(rgba(15,23,42,0.92),rgba(15,23,42,0.92)),
+  url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1800&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:120px 20px;
+}
+
+.hero-container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+.hero-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.logo{
+  font-size:28px;
+  font-weight:800;
+}
+
+.logo span{
+  color:#8B5CF6;
+}
+
+.hero-buttons a{
+  display:inline-block;
+  margin:8px;
+  padding:14px 22px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.primary-btn{
+  background:#8B5CF6;
+  color:white;
+}
+
+.secondary-btn{
+  border:1px solid rgba(255,255,255,0.2);
+  color:white;
+}
+
+.hero-buttons a:hover{
+  transform:translateY(-2px);
+}
+
+.hero-content{
+  margin-top:70px;
+  max-width:850px;
+}
+
+.hero-content h1{
+  font-size:64px;
+  line-height:1.2;
+  margin-bottom:24px;
+  font-weight:800;
+}
+
+.hero-content p{
+  font-size:20px;
+  color:#cbd5e1;
+  max-width:850px;
+}
+
+/* BADGES */
+
+.tech-stack{
+  margin-top:35px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.badge{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.12);
+  padding:12px 18px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:600;
+  backdrop-filter:blur(10px);
+}
+
+/* MAIN */
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  padding:80px 0;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:28px;
+}
+
+.card{
+  background:white;
+  border-radius:22px;
+  padding:38px;
+  box-shadow:0 8px 30px rgba(15,23,42,0.06);
+  border:1px solid #e2e8f0;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card h2{
+  font-size:28px;
+  margin-bottom:20px;
+  color:#7C3AED;
+}
+
+.card p{
+  color:#475569;
+  margin-bottom:18px;
+}
+
+/* TABLES */
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:18px;
+  overflow:hidden;
+  border-radius:14px;
+}
+
+table th{
+  background:#7C3AED;
+  color:white;
+  padding:16px;
+  text-align:left;
+}
+
+table td{
+  padding:16px;
+  border-bottom:1px solid #e2e8f0;
+}
+
+table tr:last-child td{
+  border-bottom:none;
+}
+
+/* CODE */
+
+.code{
+  background:#0f172a;
+  color:#e2e8f0;
+  padding:24px;
+  border-radius:16px;
+  overflow:auto;
+  margin-top:24px;
+  font-size:15px;
+}
+
+/* LIST */
+
+ul{
+  padding-left:20px;
+}
+
+ul li{
+  margin-bottom:12px;
+  color:#475569;
+}
+
+/* HIGHLIGHT */
+
+.highlight{
+  background:linear-gradient(135deg,#faf5ff,#ede9fe);
+  border:1px solid #ddd6fe;
+}
+
+/* CTA */
+
+.cta{
+  margin-top:70px;
+  background:linear-gradient(135deg,#7C3AED,#8B5CF6);
+  border-radius:28px;
+  padding:70px 40px;
+  text-align:center;
+  color:white;
+}
+
+.cta h2{
+  font-size:42px;
+  margin-bottom:18px;
+}
+
+.cta p{
+  max-width:760px;
+  margin:auto;
+  color:#ede9fe;
+  font-size:18px;
+}
+
+.cta-buttons{
+  margin-top:35px;
+}
+
+.cta-buttons a{
+  display:inline-block;
+  margin:10px;
+  padding:16px 28px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  transition:0.3s;
+}
+
+.cta-primary{
+  background:white;
+  color:#7C3AED;
+}
+
+.cta-secondary{
+  border:1px solid rgba(255,255,255,0.3);
+  color:white;
+}
+
+.cta-buttons a:hover{
+  transform:translateY(-2px);
+}
+
+/* FOOTER */
+
+.footer{
+  background:#0f172a;
+  color:#94a3b8;
+  padding:45px 20px;
+  text-align:center;
+  margin-top:80px;
+}
+
+.footer h3{
+  color:white;
+  margin-bottom:12px;
+  font-size:24px;
+}
+
+.footer p{
+  max-width:700px;
+  margin:auto;
+}
+
+/* LINKS */
+
+a{
+  color:#7C3AED;
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero-content h1{
+  font-size:42px;
+}
+
+.hero-content p{
+  font-size:18px;
+}
+
+.hero-top{
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.cta h2{
+  font-size:32px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="hero-container">
+
+<div class="hero-top">
+
+<div class="logo">
+QA<span>Automation</span>
+</div>
+
+<div class="hero-buttons">
+
+<a href="https://www.justacademy.co/" target="_blank" class="secondary-btn">
+Official Website
+</a>
+
+<a href="https://www.justacademy.co/job-bootcamp-detail/full-stack-qa-automation-bootcamp-end-to-end-testing-training" target="_blank" class="primary-btn">
+View Bootcamp
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-content">
+
+<h1>
+Full Stack QA Automation Roadmap 2026
+</h1>
+
+<p>
+Learn Selenium Automation Testing, API testing, framework development,
+CI/CD pipelines, Jenkins integration,
+real-world QA projects, and modern automation engineering skills used by software companies worldwide.
+</p>
+
+<div class="tech-stack">
+
+<div class="badge">Selenium WebDriver</div>
+<div class="badge">Java Automation</div>
+<div class="badge">TestNG Framework</div>
+<div class="badge">CI/CD Pipelines</div>
+<div class="badge">Jenkins</div>
+<div class="badge">API Testing</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+
+<h2>What Is Full Stack QA Automation?</h2>
+
+<p>
+Full Stack QA Automation combines frontend testing,
+backend validation,
+automation frameworks,
+API testing,
+and CI/CD automation into a complete software quality engineering workflow.
+</p>
+
+<p>
+Modern QA engineers work with automation tools to improve software reliability,
+reduce manual testing,
+and support continuous delivery pipelines.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Why Learn QA Automation In 2026?</h2>
+
+<ul>
+<li>High demand for automation engineers</li>
+<li>Rapid software release cycles</li>
+<li>Strong enterprise adoption</li>
+<li>Growing DevOps integration</li>
+<li>Excellent career scalability</li>
+</ul>
+
+<p>
+Automation testing skills are now considered essential for scalable software development teams.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Core Automation Skills</h2>
+
+<table>
+
+<tr>
+<th>Skill</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>Selenium</td>
+<td>Browser automation</td>
+</tr>
+
+<tr>
+<td>Java</td>
+<td>Automation scripting</td>
+</tr>
+
+<tr>
+<td>Postman</td>
+<td>API validation</td>
+</tr>
+
+<tr>
+<td>TestNG</td>
+<td>Framework execution</td>
+</tr>
+
+<tr>
+<td>Jenkins</td>
+<td>CI/CD automation</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Common Beginner Mistakes</h2>
+
+<table>
+
+<tr>
+<th>Mistake</th>
+<th>Result</th>
+</tr>
+
+<tr>
+<td>No framework structure</td>
+<td>Messy test cases</td>
+</tr>
+
+<tr>
+<td>Skipping waits</td>
+<td>Unstable scripts</td>
+</tr>
+
+<tr>
+<td>Only learning theory</td>
+<td>Poor real-world readiness</td>
+</tr>
+
+<tr>
+<td>No GitHub projects</td>
+<td>Weak portfolio</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Automation Learning Roadmap</h2>
+
+<div class="code">
+<pre>
+1. Java Fundamentals
+2. Selenium WebDriver
+3. XPath & Locators
+4. TestNG Framework
+5. Maven Build Tools
+6. API Testing
+7. Jenkins CI/CD
+8. Hybrid Framework Design
+9. Real-World Projects
+10. GitHub Portfolio
+</pre>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Example Selenium Script</h2>
+
+<div class="code">
+<pre>
+WebDriver driver = new ChromeDriver();
+
+driver.get("https://example.com");
+
+driver.findElement(By.id("login")).click();
+
+driver.quit();
+</pre>
+</div>
+
+</div>
+
+<div class="card highlight">
+
+<h2>Useful Learning Resources</h2>
+
+<ul>
+
+<li>
+<a href="https://www.justacademy.co/" target="_blank">
+Official Website
+</a>
+</li>
+
+<li>
+<a href="https://www.justacademy.co/job-bootcamp-detail/full-stack-qa-automation-bootcamp-end-to-end-testing-training" target="_blank">
+Global QA Automation Bootcamp
+</a>
+</li>
+
+<li>
+<a href="https://www.justacademy.co/job-bootcamp-detail/mumbai/full-stack-qa-automation-bootcamp-in-mumbai-end-to-end-testing-automation-training" target="_blank">
+Mumbai Classroom Bootcamp
+</a>
+</li>
+
+<li>
+<a href="https://justacademy4.wordpress.com/2026/05/28/the-complete-guide-to-full-stack-qa-automation-skills-career-paths-and-how-to-get-hired-in-2026/" target="_blank">
+Read QA Automation Blog
+</a>
+</li>
+
+<li>
+<a href="https://www.justacademy.co/register-for-course-demo" target="_blank">
+Register For Free Demo
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="cta">
+
+<h2>Build Real-World Automation Skills</h2>
+
+<p>
+Master Selenium Automation Testing,
+API testing,
+framework development,
+and CI/CD integration through practical projects and structured QA Automation learning paths.
+</p>
+
+<div class="cta-buttons">
+
+<a href="https://www.justacademy.co/job-bootcamp-detail/full-stack-qa-automation-bootcamp-end-to-end-testing-training" target="_blank" class="cta-primary">
+Explore Online Bootcamp
+</a>
+
+<a href="https://www.justacademy.co/job-bootcamp-detail/mumbai/full-stack-qa-automation-bootcamp-in-mumbai-end-to-end-testing-automation-training" target="_blank" class="cta-secondary">
+Mumbai Classroom Training
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+
+<h3>Full Stack QA Automation Roadmap 2026</h3>
+
+<p>
+Educational QA Automation Repository • Selenium • TestNG • Jenkins • CI/CD • API Testing
+</p>
+
+</div>
+
+</body>
+</html>
